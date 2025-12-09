@@ -1,7 +1,16 @@
+/// <reference types="vite/client" />
 import { GoogleGenAI, Type } from "@google/genai";
 import { AnalysisResult } from '../types';
 
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+// En Vite/Vercel usamos VITE_API_KEY. El fallback a string vacío previene error en runtime, 
+// aunque fallará la llamada si no está configurada la variable en Vercel.
+const apiKey = import.meta.env.VITE_API_KEY || '';
+
+if (!apiKey) {
+  console.warn("ADVERTENCIA: VITE_API_KEY no detectada. La funcionalidad de IA no responderá correctamente.");
+}
+
+const ai = new GoogleGenAI({ apiKey });
 
 export const analyzeProjectIdea = async (idea: string): Promise<AnalysisResult> => {
   try {

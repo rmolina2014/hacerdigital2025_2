@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Bot, Send, Sparkles, Loader2, Target, Map as MapIcon, Database } from 'lucide-react';
+import { Bot, Sparkles, Loader2, Target, Map as MapIcon, Database } from 'lucide-react';
 import { analyzeProjectIdea } from '../services/geminiService';
 import { AnalysisResult } from '../types';
 

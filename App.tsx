@@ -5,6 +5,7 @@ import Services from './components/Services';
 import AiConsultant from './components/AiConsultant';
 import DataVizDemo from './components/DataVizDemo';
 import MapDemo from './components/MapDemo';
+import ContactForm from './components/ContactForm';
 import Footer from './components/Footer';
 
 function App() {
@@ -44,19 +45,7 @@ function App() {
 
       <AiConsultant />
       
-      <section id="contact" className="py-24 bg-slate-900">
-        <div className="container mx-auto px-6 text-center">
-          <div className="max-w-3xl mx-auto glass-panel p-10 rounded-3xl border border-blue-500/20 shadow-[0_0_50px_rgba(37,99,235,0.1)]">
-            <h2 className="text-3xl font-bold text-white mb-6">¿Listo para innovar?</h2>
-            <p className="text-slate-300 mb-8">
-              Agenda una reunión de 15 minutos para descubrir cómo aplicar Data Science y Mapas en tu negocio.
-            </p>
-            <button className="px-8 py-4 bg-blue-600 hover:bg-blue-500 text-white rounded-xl font-bold text-lg transition-all shadow-lg hover:shadow-blue-500/40">
-              Agendar Reunión Ahora
-            </button>
-          </div>
-        </div>
-      </section>
+      <ContactForm />
 
       <Footer />
     </div>
